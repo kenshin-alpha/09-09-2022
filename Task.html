@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Task.css">
+</head>
+<body>
+    <h1>E-Book Grand Sale</h1>
+    <div class="column">
+        <table cellpadding="4" cellspacing="4">
+            <tbody><tr>
+            <td>Customer Name</td>
+            <td><input name="customerName" id="fn" size="30" type="text" placeholder="Enter the Customer Name"></td>
+            </tr>
+          
+            <tr>
+            <td>EMail ID</td>
+             <td><input name="emailId" size="30" type="text"></td>
+            </tr>
+            <tr>
+             <td>Mobile Number</td>
+            <td><input id="mobileNumber" size="30" type="text"></td>
+            </tr>
+            <tr>
+             <td>Book Category</td>
+            <td><input type="radio" id="Science" name="fav_language" value="HTML">
+                <label for="html">Science</label>
+                <input type="radio" id="Comics" name="fav_language" value="CSS">
+                <label for="css">Comics</label>
+            </td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                 <td><input name="Type" size="30" type="text"></td>
+            </tr>
+            <tr>
+                <td>No. of Books Required</td><td>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="500" value="1" class="slider" id="myRange">
+                  </div></td>
+                <td><p id="count"></p></td>  
+            </tr>
+            <tr>
+                <td>
+                    <button type="total" onclick="myfunc()" >Calculate Total Price</button>
+                    <button type="reset"> Reset </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Price is:</td>
+                <td id="result">0</td>
+            </tr>
+
+          </tbody></table>
+        </div>
+        <br>
+
+        <div class="table">
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Book Type</td>
+                    <td>PerBook cost</td>
+                    <td>Discount Rate(in percentage)</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>400</td>
+                    <td>5% if total book count<=250</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>400</td>
+                    <td>7% if total book count > 250</td>
+                </tr>
+                <tr>
+                    <td>Comics</td>
+                    <td>300</td>
+                    <td>3% if total book count<=250</td>
+                </tr>
+                <tr>
+                    <td>Comics</td>
+                    <td>300</td>
+                    <td>4% if total book count > 250</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="Task.js"></script>
+</body>
+</html>
